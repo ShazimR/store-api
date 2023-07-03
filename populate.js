@@ -10,10 +10,14 @@ const start = async () => {
     try {
         await connectDB(process.env.MONGO_URI);
         await Product.deleteMany();
+        console.log('\ndatabase flushed successfully');
         await Product.create(jsonProducts);
-        console.log('Success');
+        console.log('\nproducts added successfully');
+        console.log('\nDONE');
+        process.exit(0);
     } catch (error) {
         console.log(error);
+        process.exit(1);
     }
 };
 
