@@ -40,6 +40,12 @@ PORT=your_port
 
 ## Usage
 
+### Populating the Database (optional)
+
+```sh
+node populate.js
+```
+
 ### Serving the App
 
 ```sh
